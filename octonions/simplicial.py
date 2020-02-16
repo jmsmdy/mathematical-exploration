@@ -15,7 +15,7 @@ def is_equal(oriented_simplex_A, oriented_simplex_B):
         return is_equal(tuple(A[1:]), tuple(B[1:]))
     else:
         B[i] = B[0]
-        return is_equal(tuple(A[1:]), tuple(B[1:]))
+        return not is_equal(tuple(A[1:]), tuple(B[1:]))
     
 def are_equal(set_A, set_B):
     A = list(set_A)
