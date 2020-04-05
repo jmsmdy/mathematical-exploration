@@ -44,7 +44,7 @@
 (5) $^*$ is a multiplicative anti-homomorphism: $(\mathbf{x} \cdot \mathbf{y})^* = \mathbf{y}^* \cdot \mathbf{x}^*$
 \end{definition}
 
-\begin{definition} A \textbf{presentation} of a $*$-algebra over a field $\mathcal{K}$ is a vector space $V$ over \(\mathcal{K}\) together with a $\mathcal{K}$-linear function $L: V \rightarrow End(V)$ and an involution $^{\dagger} : V \rightarrow V$ such that for all \(x,y \in V\) $(L(x)y)^{\dagger} = L(y^{\dagger}) x^{\dagger}$.\\
+\begin{definition} A \textbf{presentation} of a $*$-algebra over a field $\mathcal{K}$ is a vector space $V$ over \(\mathcal{K}\) together with a $\mathcal{K}$-linear function $L: V \rightarrow End(V)$ and a linear involution $^{\dagger} : V \rightarrow V$ such that for all \(x,y \in V\) $(L(x)y)^{\dagger} = L(y^{\dagger}) x^{\dagger}$.\\
 
 \noindent We say \((V, L, {}^\dagger)\) is a \textbf{presentation of \(\mathcal{A}\)} if there is a linear isomorphism \(\pi: \mathcal{A} \rightarrow V\) such that:
 
@@ -53,16 +53,21 @@
 (b) For all $\mathbf{x} \in \mathcal{A}$, $\pi(\mathbf{x}^*) = \pi(\mathbf{x})^{\dagger}$
 \end{definition} 
 
-\begin{observation} Every \(*\)-algebra \(\mathcal{A}\) over a field \(\mathcal{K}\) has a presentation where \(\pi\) is the forgetful map from \(\mathcal{A}\) to the underling vector space \(V\) of \(\mathcal{A}\), \(L(x)y := \pi(\pi^{-1}(x) \cdot \pi^{-1}(y)\)), and \(x^{\dagger} := \pi(\pi^{-1}(x)^*)\).
+\begin{observation} Every \(*\)-algebra \(\mathcal{A}\) over a field \(\mathcal{K}\) has a presentation where \(\pi\) is the forgetful map from \(\mathcal{A}\) to the underling vector space \(V\) of \(\mathcal{A}\), \(L(x)y := \pi(\pi^{-1}(x) \cdot \pi^{-1}(y))\), and \(x^{\dagger} := \pi(\pi^{-1}(x)^*)\).
 \end{observation}
 
 \begin{proof}
-Properties (a) and (b) are satisfied by definition. It's clear \(\dagger\) is an involution. \((x,y) \mapsto L(x)y\) is bilinear since it is the pushforward of multiplication in \(\mathcal{A}\), so \(x \mapsto L(x)\) is \(\mathcal{K}\)-linear. It suffices to show then that for all \(x,y \in V\), $(L(x)y)^{\dagger} = L(y^{\dagger}) x^{\dagger}$. We can see this as follows:
+Properties (a) and (b) are satisfied by definition. It's clear \(\dagger\) is an involution. \((x,y) \mapsto L(x)y\) is \(\mathcal{K}\)-bilinear since it is the pushforward of multiplication in \(\mathcal{A}\), so \(x \mapsto L(x)\) is \(\mathcal{K}\)-linear. It suffices to show then that for all \(x,y \in V\), $(L(x)y)^{\dagger} = L(y^{\dagger}) x^{\dagger}$. We can see this as follows:
 
 \[(L(x)y)^{\dagger} = \pi(\pi^{-1}(L(x)y)^*) = \pi((\pi^{-1}(x) \cdot \pi^{-1}(y))^*)\] \[ = \pi(\pi^{-1}(y)^* \cdot \pi^{-1}(x)^*)= \pi(\pi^{-1}(y^{\dagger}) \cdot \pi^{-1}(x^{\dagger})) = L(y^{\dagger})x^{\dagger}\].
 \end{proof}
 
+\begin{observation} Given a presentation  of a \(*\)-algebra over \(\mathcal{K}\), \((V, L, ^{\dagger})\), we can turn \(V\) into a \(*\)-algebra by defining \(\cdot : V^2 \rightarrow V\) by \(x \cdot y = L(x)y\) and \(^* : V \rightarrow V\) defined by \(x^* = x^{\dagger}\).
+\end{observation}
 
+\begin{proof}
+Left as an exercise for the reader.
+\end{proof}
 
 \begin{definition}
 A division $*$-algebra over $\mathcal{K}$ is a $*$-algebra over $\mathcal{K}$ satisfying the following two additional conditions:
