@@ -31,7 +31,11 @@
 
 \section*{Introduction} 
 
-\begin{definition} A $*$-algebra over a field $\mathcal{K}$ is a vector space $\mathcal{A}$ over $\mathcal{K}$ together with a not necessarily commutive nor associative binary multiplication operator $\cdot: \mathcal{A} \times \mathcal{A} \rightarrow \mathcal{A}$, and a unary involution $^*:\mathcal{A} \rightarrow \mathcal{A}$ satisfying the following axioms:
+Sol\`{e}r's theorem gives an a priori reason to do physics over either \(\mathbb{R}\), \(\mathbb{C}\), or \(\mathbb{H}\). In this document we explore some concepts in the neighborhood of Sol\`{e}r's theorem. 
+
+\section{Basic Definitions}
+
+\begin{definition} A \textbf{$*$-algebra} over a field $\mathcal{K}$ is a vector space $\mathcal{A}$ over $\mathcal{K}$ together with a not necessarily commutive nor associative binary multiplication operator $\cdot: \mathcal{A} \times \mathcal{A} \rightarrow \mathcal{A}$, and a unary involution $^*:\mathcal{A} \rightarrow \mathcal{A}$ satisfying the following axioms:
 
 (1) Left distributivity of multiplication over addition: $\mathbf{x} \cdot (\mathbf{y} + \mathbf{z}) = (\mathbf{x} \cdot \mathbf{y}) + (\mathbf{x} \cdot \mathbf{z})$
 
@@ -62,7 +66,7 @@ Properties (a) and (b) are satisfied by definition. It's clear \(\dagger\) is an
 \[(L(x)y)^{\dagger} = \pi(\pi^{-1}(L(x)y)^*) = \pi((\pi^{-1}(x) \cdot \pi^{-1}(y))^*)\] \[ = \pi(\pi^{-1}(y)^* \cdot \pi^{-1}(x)^*)= \pi(\pi^{-1}(y^{\dagger}) \cdot \pi^{-1}(x^{\dagger})) = L(y^{\dagger})x^{\dagger}\].
 \end{proof}
 
-\begin{observation} Given a presentation  of a \(*\)-algebra over \(\mathcal{K}\), \((V, L, ^{\dagger})\), we can turn \(V\) into a \(*\)-algebra by defining \(\cdot : V^2 \rightarrow V\) by \(x \cdot y = L(x)y\) and \(^* : V \rightarrow V\) defined by \(x^* = x^{\dagger}\).
+\begin{observation} Given a presentation  of a \(*\)-algebra over \(\mathcal{K}\), \((V, L, ^{\dagger})\), we can turn \(V\) into a \(*\)-algebra by defining \(\cdot : V^2 \rightarrow V\) by \(x \cdot y = L(x)y\) and defining \(^* : V \rightarrow V\) by \(x^* = x^{\dagger}\).
 \end{observation}
 
 \begin{proof}
@@ -70,10 +74,14 @@ Left as an exercise for the reader.
 \end{proof}
 
 \begin{definition}
-A division $*$-algebra over $\mathcal{K}$ is a $*$-algebra over $\mathcal{K}$ satisfying the following two additional conditions:
+A \textbf{division $*$-algebra} over $\mathcal{K}$ is a $*$-algebra over $\mathcal{K}$ satisfying the following two additional conditions:
 
 (6) Right division: for any $\mathbf{x}$ and any non-zero $\mathbf{y}$, there exists a unique $\mathbf{z}$ such that $\mathbf{x} = \mathbf{z} \cdot \mathbf{y}$
 
 (7) Left division: for any $\mathbf{x}$ and any non-zero $\mathbf{y}$, there exists a unique $\mathbf{z}$ such that $\mathbf{x} = \mathbf{y} \cdot \mathbf{z}$
 \end{definition}
+
+\begin{observation}
+A presentation of a \(*\)-algebra over \(\mathcal{K}\) is of a division \(*\)-algebra if and only if \(\forall x \in V\), \(L(x) \in GL(V)\). 
+\end{observation}
 \end{document}
