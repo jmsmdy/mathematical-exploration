@@ -1,0 +1,59 @@
+\documentclass[12pt]{article}
+\title{Division $*$-algebras}
+\author{James Moody}
+\date{April 2020}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{amsthm}
+\usepackage{bbm}
+\usepackage[margin=0.5in]{geometry}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\newtheorem{condition}[theorem]{Condition}
+\newtheorem{claim}[theorem]{Claim}
+\newtheorem{question}[theorem]{Question}
+\newtheorem{corollary}[theorem]{Corollary} 
+\theoremstyle{definition}
+\newtheorem{definition}[theorem]{Definition}
+\newtheorem{statement}[theorem]{Statement}
+\newtheorem{notation}[theorem]{Notation} 
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\begin{document}
+
+\maketitle
+
+\section*{Introduction} 
+
+\begin{definition} A $*$-algebra over a field $\mathcal{K}$ is a vector space $\mathcal{A}$ over $\mathcal{K}$ together with a not necessarily commutive nor associative binary multiplication operator $\cdot: \mathcal{A} \times \mathcal{A} \rightarrow \mathcal{A}$, and a unary involution $^*:\mathcal{A} \rightarrow \mathcal{A}$ satisfying the following axioms:
+
+(1) Left distributivity of multiplication over addition: $\mathbf{x} \cdot (\mathbf{y} + \mathbf{z}) = (\mathbf{x} \cdot \mathbf{y}) + (\mathbf{x} \cdot \mathbf{z})$
+
+(2) Right distributivity of multiplication over addition: $(\mathbf{x}+\mathbf{y}) \cdot \mathbf{z} = (\mathbf{x} \cdot \mathbf{z}) + (\mathbf{y} \cdot \mathbf{z})$
+
+(3) Compatibility with scalars: $(a\mathbf{x}) \cdot (b \mathbf{y}) = (ab)(\mathbf{x} \cdot \mathbf{y})$
+
+(4) $^*$ is an additive homomorphism: $(\mathbf{x}+\mathbf{y})^* = \mathbf{x}^* + \mathbf{y}^*$
+
+(5) $^*$ is a multiplicative anti-homomorphism: $(\mathbf{x} \cdot \mathbf{y})^* = \mathbf{y}^* \cdot \mathbf{x}^*$
+\end{definition}
+
+\begin{definition} A representation of a $*$-algebra $\mathcal{A}$ over a field $\mathcal{K}$ is a $\mathcal{K}$-linear map $\pi : \mathcal{A} \rightarrow V$ to some vector space $\mathcal{V}$ together with a $\mathcal{K}$-linear function $L: \mathcal{V} \rightarrow End(V)$ and an involution $^{\dagger} : V \rightarrow V$ such that
+
+(a) For all $\mathbf{x}, \mathbf{y} \in \mathcal{A}$, $\pi(\mathbf{x} \cdot \mathbf{y}) = L(\pi(\mathbf{x})) \pi(\mathbf{y})$ 
+
+(b) For all $\mathbf{x} \in \mathcal{A}$, $\pi(x^*) = \pi(x)^{\dagger}$
+\end{definition} 
+
+\begin{definition}
+A division $*$-algebra over $\mathcal{K}$ is a $*$-algebra over $\mathcal{K}$ satisfying the following two additional conditions:
+
+(6) Right division: for any $\mathbf{x}$ and any non-zero $\mathbf{y}$, there exists a unique $\mathbf{z}$ such that $\mathbf{x} = \mathbf{z} \cdot \mathbf{y}$
+
+(7) Left division: for any $\mathbf{x}$ and any non-zero $\mathbf{y}$, there exists a unique $\mathbf{z}$ such that $\mathbf{x} = \mathbf{y} \cdot \mathbf{z}$
+\end{definition}
+\end{document}
